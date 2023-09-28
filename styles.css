@@ -1,0 +1,115 @@
+ /*	CS0053 - Technical 3 Source Code for 1T AY 2023-2024
+
+    Program:        Functions - Recursion
+    Programmer(s): 
+                    Vassili L. Inacay (L)
+                    Katryna Lei V. Martin 
+    Section:        AN31
+    Start Date:     September 28, 2023
+    End Date:       October 2, 2023
+*/
+
+ /*
+    CALCULATOR'S THEME
+    #11324D - dark blue
+    #DAF5FF - light blue
+    #12486B - dark blue green || rgb(18, 72, 107)
+    #419197 - aquamarine 	  || rgb(65, 145, 151)
+    #78D6C6 - teal 			  || rgb(120, 214, 198)
+    #FAF0E4 - beige
+    #F5FCCD - yellow
+*/
+
+body {
+	background: #FAF0E4;
+	font-family: Poppins, Arial;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 25%; 
+    width: 100%; 
+    height: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.scrollable-container {
+    overflow: auto; 
+}
+
+.popup {
+	background: #11324D;
+	border-radius: 20px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	padding: 20px;
+	transition: all 0.006s ease-in-out;
+	width: 30%;
+	height: auto;
+}
+
+.popup h1 {
+    background: linear-gradient(to top right, #F5FCCD, #12486B,
+                    #419197, #78D6C6);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+	font-size: 50px;
+	font-weight: bold;
+	margin: 5px auto;
+}
+
+.popup p { 
+    margin: 30px auto;
+    font-size: 24px;
+}
+
+#result {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.popup .container-box {
+	padding: 20px;
+	overflow: hidden;
+}
+
+.container-box {
+    margin: 0 auto;
+    padding: 20px;																					
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);																				
+}
+
+input[type="number"]{ 
+    width: 80%;
+    padding: 8px;
+    margin: 5px 5px 5px -5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Poppins, Arial;
+    font-size: 15px;
+    -moz-appearance: textfield;
+}
+
+button  {
+    border-radius: 15px 50px 30px;
+    width: 50%;
+    background-color: #12486B;
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Poppins, Arial;
+    color: #F5FCCD;
+}
+
+button:hover {
+	background: #DAF5FF;
+	color: #12486B;
+}
