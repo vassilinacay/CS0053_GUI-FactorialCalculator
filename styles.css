@@ -1,4 +1,4 @@
- /*	CS0053 - Technical 3 Source Code for 1T AY 2023-2024
+/*	CS0053 - Technical 3 Source Code for 1T AY 2023-2024
 
     Program:        Functions - Recursion
     Programmer(s): 
@@ -18,87 +18,103 @@
     #78D6C6 - teal 			  || rgb(120, 214, 198)
     #FAF0E4 - beige
     #F5FCCD - yellow
+    #800000 - maroon
 */
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+}
+
+/* BODY STYLE */
 body {
 	background: #FAF0E4;
 	font-family: Poppins, Arial;
     text-align: center;
 }
 
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wrapper > * {
+    padding: 20px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.main {
+    font-size: 22px;
+    height: 525px;
+    position: relative;
+}
+
 .footer {
-    position: absolute;
-    bottom: 25%; 
-    width: 100%; 
+    font-weight: bold;
     height: 5px;
     text-align: center;
-    font-weight: bold;
 }
 
-.scrollable-container {
-    overflow: auto; 
-}
-
-.popup {
-	background: #11324D;
+/* CALCULATOR'S CONTAINER WHERE USER INPUT AND RESULT WILL BE DISPLAYED */
+.container {
+	background: #FAF0E4;
+    border: #11324D inset 20px;
 	border-radius: 20px;
-	position: fixed;
+    width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	padding: 20px;
-	transition: all 0.006s ease-in-out;
-	width: 30%;
-	height: auto;
+    position: absolute;
+    padding: 20px;
+    margin: 20px 0;
 }
 
-.popup h1 {
+h1 {
     background: linear-gradient(to top right, #F5FCCD, #12486B,
                     #419197, #78D6C6);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
-	font-size: 50px;
-	font-weight: bold;
-	margin: 5px auto;
+	font-size: 40px;
+	font-family: Poppins-Bold;
+    margin: 0 0 5px 0;
+    padding: 20px;
+    line-height: 1.2;
 }
 
-.popup p { 
-    margin: 30px auto;
-    font-size: 24px;
-}
-
-#result {
-    font-size: 24px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.popup .container-box {
-	padding: 20px;
-	overflow: hidden;
-}
-
-.container-box {
-    margin: 0 auto;
-    padding: 20px;																					
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);																				
-}
+p { margin: 0 auto 10px auto; }
 
 input[type="number"]{ 
     width: 80%;
     padding: 8px;
     margin: 5px 5px 5px -5px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 10px;
     font-family: Poppins, Arial;
     font-size: 15px;
     -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+span { padding: 5px auto; }
+
+#result {  
+
+    font-size: 22px;
+    margin: 20px auto;
+    font-weight: bold;
+    background: #F5FCCD;
+    color: #800000;
 }
 
 button  {
-    border-radius: 15px 50px 30px;
+    border-radius: 20px / 40px;
     width: 50%;
     background-color: #12486B;
     margin: 10px 20px;

@@ -1,4 +1,4 @@
- /*	CS0053 - Technical 3 Source Code for 1T AY 2023-2024
+/*	CS0053 - Technical 3 Source Code for 1T AY 2023-2024
 
     Program:        Functions - Recursion
     Programmer(s): 
@@ -9,14 +9,13 @@
     End Date:       October 2, 2023
 */
 
-// Check if the numberInput by user is a valid number
 function calculateFactorial() {
     const numberInput = document.getElementById('numberInput');
     const resultElement = document.getElementById('result');
     const num = parseInt(numberInput.value);
 
-    // 'isNaN' stands for "is not a number"
-    if (isNaN(num)) {
+    // Check if the numberInput by user is a valid number
+    if (isNaN(num) || num < 0) {
         resultElement.textContent = 'Please enter a valid number.';
     } else {
         const factorial = calculateRecursiveFactorial(num);
@@ -32,3 +31,10 @@ function calculateRecursiveFactorial(n) {
         return n * calculateRecursiveFactorial(n - 1);
     }
 }
+
+document.addEventListener('keydown', (event) => {
+    const eventKey = event.key;
+    if(eventKey === 'Enter') {
+        document.getElementById('calc-btn').click();
+    }
+})
