@@ -10,25 +10,25 @@
 */
 
 function calculateFactorial() {
-    const numberInput = document.getElementById('numberInput');
-    const resultElement = document.getElementById('result');
-    const num = parseInt(numberInput.value);
+    const enteredNumber = document.getElementById('entered-num');
+    const result = document.getElementById('result');
+    const num = parseInt(enteredNumber.value);
 
-    // Check if the numberInput by user is a valid number
+    // Check if the enteredNumber by user is a valid number
     if (isNaN(num) || num < 0) {
-        resultElement.textContent = 'Please enter a valid number.';
+        result.textContent = 'Please enter a valid number.';
     } else {
-        const factorial = calculateRecursiveFactorial(num);
-        resultElement.textContent = `Factorial of ${num} is ${factorial}`;
+        const factorial = getFactorial(num);
+        result.textContent = `Factorial of ${num} is ${factorial}`;
     }
 }
 
 // Calculate the factorial of a number recursively
-function calculateRecursiveFactorial(n) {
+function getFactorial(n) {
     if (n <= 1) {
         return 1;
     } else {
-        return n * calculateRecursiveFactorial(n - 1);
+        return n * getFactorial(n - 1);
     }
 }
 
